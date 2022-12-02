@@ -1,38 +1,242 @@
 .App {
+  margin: 0;
+}
+
+body {
+  background-image: url("./background.jpg");
+  height: 100vh;
+  width: 98vw;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+
+  color: white;
+}
+
+.navbar {
+  height: 50px;
+  background-color: black;
+  display: flex;
+  position: fixed;
+  margin-top: 0;
+  top: 0;
+  left: 0;
+  width: 98vw;
+}
+
+.navbar .left {
+  padding-top: 1%;
+  flex: 40%;
+  padding-left: 2%;
+}
+.navbar .right {
+  padding-top: 1%;
+  flex: 60%;
+  float: right;
+
+  font-size: 22px;
+  line-height: 26px;
+  color: white;
+}
+.navbar .right span {
+  margin-left: 2.4%;
+}
+.navbar .right .nav-link :hover {
+  cursor: pointer;
+  font-size: 30px;
+}
+
+.header {
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
   text-align: center;
+  color: rgba(84, 147, 210, 0.88);
+  margin-bottom: 10%;
+}
+.header .bg {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: -1;
+}
+.header .bg img {
+  width: 98vw;
+}
+.header .header-text {
+  margin-top: 10%;
+  font-size: 30px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Stats-container {
+  height: fit-content;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  color: rgba(84, 147, 210);
+  margin-bottom: 10%;
+  font-size: 40px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Stats-container .bg-stats img {
+  position: absolute;
+  top: 550px;
+  left: -9%;
+  z-index: -1;
+  height: 120%;
+  opacity: 0.3;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Stats-container .stats {
+  display: flex;
+  flex-direction: row;
+}
+
+.Stats-container .stats .stats-blocks {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  flex: 60%;
+}
+.Stats-container .stats .stats-blocks .green {
+  margin-top: 5%;
+  height: fit-content;
+  width: 70%;
+  border: 1px solid;
+  border-color: #4fa3a5;
+  border-radius: 20px;
+  color: #4fa3a5;
+  box-shadow: 1px 1px 5px 5px #4fa3a5;
+}
+.Stats-container .stats .stats-blocks .orange {
+  margin-top: 5%;
+  height: fit-content;
+  width: 70%;
+  border: 1px solid;
+  border-color: #F9AC66E5;
+  border-radius: 20px;
+  color:#F9AC66E5;
+  box-shadow: 1px 1px 5px 5px #F9AC66E5;
+}
+.Stats-container .stats .stats-blocks .dual {
+  margin-top: 5%;
+  display: flex;
+  width: 70%;
+ 
+}
+.Stats-container .stats .stats-blocks .dual .red {
+  margin-top: 2%;
+  margin-left:2%;
+  margin-right: 2%;
+  height: fit-content;
+  flex: 50%;
+  border: 1px solid;
+  border-color:  #ED6B5B;
+  border-radius: 20px;
+  color:#ED6B5B;
+  box-shadow: 1px 1px 5px 5px #ED6B5B;
+}
+.Stats-container .stats .stats-blocks .dual .purple {
+  margin-top: 2%;
+  margin-left:2%;
+  margin-right: 2%;
+  height: fit-content;
+  flex: 50%;
+  border: 1px solid;
+  border-color:  #7624FC;
+  border-radius: 20px;
+  color:#7624FC;
+  box-shadow: 1px 1px 5px 5px #7624FC;
+}
+.Stats-container .stats .stats-img {
+  flex: 40%;
+}
+
+.why-container {
+  height: fit-content;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  
+  color: rgba(84, 147, 210, 0.88);
+  
+  font-size: 40px;
+}
+.why-container .bg-why{
+  text-align: left !important;
+  position: absolute;
+  top: 1170px;
+  left: 0;
+  z-index: -1;
+}
+.why-container .bg-why .astroImage{
+  position:relative;
+  top: 0;
+  left: 5%;
+  margin-top: -40%;
+}
+
+.why-container .why {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.why-container .why-block{
+  display: flex;
+  flex-direction: row;
+  border: 1px solid;
+  border-color: #4fa3a5;
+  border-radius: 20px;
+  box-shadow: 1px 1px 5px 5px #4fa3a5;
+  width: 80%;
+  margin-left: 5%;
+  margin-top: 5%;
+  padding: 5%;
+  margin-bottom: 15%;
+}
+
+.why-container .why-block .img-swap{
+  flex: 40%;
+}
+.why-container .why-block .swap{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: rgba(255, 255, 255);
+  flex:60%;
+  font-size: 26px;
+}
+
+.why-container h3{
+  color: rgba(245, 134, 182);
+  font-size: 42px;
+}
+.why-container .network {
+  margin-top: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin-left: -2.5%;
+}
+
+.why-container .whyCompBox{
+  border: 1px white;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  height: 87px;
+  width: 280px;
   color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
